@@ -25,7 +25,6 @@ export class ProgressBarComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     window.onload = () => {
       this.showProgressBar = true;
-      console.log('this.loadingTime', this.loadingTime);
       this.initProgressBar(this.loadingTime);
     };
   }

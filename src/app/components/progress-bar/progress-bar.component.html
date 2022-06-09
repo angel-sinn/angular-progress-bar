@@ -1,1 +1,9 @@
-<p>progress-bar works!</p>
+<div *ngIf="showProgressBar">
+  <div class="progress__bar">
+    <div class="progress__loading"></div>
+  </div>
+  <div class="progress__loading-text">Loading</div>
+</div>
+<div *ngIf="!showProgressBar">
+  <div class="progress__loaded-text">Loading Complete!</div>
+</div>

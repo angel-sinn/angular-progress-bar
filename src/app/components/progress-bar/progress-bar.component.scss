@@ -1,0 +1,49 @@
+.progress__bar {
+  position: relative;
+  width: 400px;
+  height: 30px;
+  background-color: #bbdeec;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.progress__loading {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #e6c5e4, #c471ed, #12c2e9);
+  transition: all 0.2s;
+  animation: progress;
+}
+
+.progress__loading-text {
+  color: #797979;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.progress__loaded-text {
+  color: #797979;
+  font-weight: bold;
+  font-size: 18px;
+  animation: fadeIn 1s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

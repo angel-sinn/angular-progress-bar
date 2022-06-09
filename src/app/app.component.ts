@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title: string = 'PENNY FE DEV TEST';
-  loading: boolean = false;
+  isLoading: boolean = false;
+  loadingTime: number = 0;
 
   ngOnInit() {
-    this.loading = true;
-    setTimeout(() => (this.loading = false), this.randomInt(4, 8) * 1000);
+    this.isLoading = true;
+    this.loadingTime = this.randomInt(4, 8) * 1000;
+    setTimeout(() => (this.isLoading = false), this.loadingTime);
   }
 
   randomInt(min: number, max: number) {
